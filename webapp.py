@@ -66,7 +66,7 @@ def main():
                     <p class='intro'></p>
                 </div>
                 """, unsafe_allow_html=True)
-    Race = st.selectbox("Gender (Mexican American = 1, Other Hispanic = 2, Non-Hispanic White = 3, Non-Hispanic Black = 4, Other race = 5)", [1,2,3,4,5], index=3)
+    Race = st.selectbox("Race (Mexican American = 1, Other Hispanic = 2, Non-Hispanic White = 3, Non-Hispanic Black = 4, Other race = 5)", [1,2,3,4,5], index=3)
     BMI = st.number_input("BMI (kg/m^2)", value=24.51)
     Age = st.number_input("Age (years)", value=48)
     Hypertension = st.selectbox("Hypertension (Yes = 1, No = 2)", [1, 2], index=1)
@@ -74,7 +74,7 @@ def main():
     Educationallevel = st.selectbox("Educational level (Less than high school = 1, High school = 2, More than high school = 3)", [1, 2, 3], index=2)
     C140 = st.number_input("dietary C14:0 fatty acid intake (g/day)", value=8.087)
     C40 =st.number_input("dietary C4:0 fatty acid intake (g/day)", value=2.411)
-    CVD = st.selectbox("Gender (No = 0, Yes = 1)", [0, 1], index=0)
+    CVD = st.selectbox("CVD (No = 0, Yes = 1)", [0, 1], index=0)
 
     if st.button(label="Submit"):
         user = Subject(Race, BMI, Age, Hypertension, Diabetes, Educationallevel, C140, C40, CVD)
